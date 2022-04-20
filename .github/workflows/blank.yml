@@ -22,12 +22,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-        - id: info
-          uses: konveyor/get-release-info@v1
-          with:
-            owner: "owner"
-            repo: "repo"
-        - run: echo '${{ steps.info.outputs.release_info }}'
+        - name: Checkout code
+          uses: actions/checkout@v2
+
+        - name: Get release
+          id: get_release
+          uses: bruceadams/get-release@v1.2.3
+          env:
+            GITHUB_TOKEN: ${{ github.token }}
 #       - name: Checkout code
 #         uses: actions/checkout@v2
 #       - name: Get release
