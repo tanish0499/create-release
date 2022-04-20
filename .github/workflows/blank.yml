@@ -35,7 +35,7 @@ jobs:
 
       - name: Get release
         id: get_release
-        uses: tanish0499/create-release/get-release@v0.1.0
+        uses: tanish0499/create-release/Release@v0.1.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
