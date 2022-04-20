@@ -22,26 +22,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Get release
         id: get_release
         uses: tanish0499/create-release@v1
         env:
           GITHUB_TOKEN: ${{ github.token }}
-
       - name: Build binary
         run: cargo build --release --verbose
-
       - name: Upload release binary
         uses: actions/upload-release-asset@v1.0.2
         env:
