@@ -8,7 +8,7 @@ on:
 
 jobs:
   workflow-job:
-    runs-on: latest
+    runs-on: ubuntu-latest
     steps:
       - name: list files
         run: ls -lart
