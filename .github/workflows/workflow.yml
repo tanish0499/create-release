@@ -8,7 +8,7 @@ on:
 
 jobs:
   workflow-job
-  runs-on: latest
-  steps:
-    - name: list files
-      run: ls -lart
+    runs-on: latest
+    steps:
+      - name: list files
+        run: ls -lart
