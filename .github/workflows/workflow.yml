@@ -12,3 +12,9 @@ jobs:
     steps:
       - name: list files
         run: ls -lart
+
+      - name: go to root directory and list files
+        run: |
+          cd /
+          pwd
+          ls -lart
