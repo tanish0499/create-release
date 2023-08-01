@@ -3,7 +3,7 @@ name: workflow file with on
 on:
   workflow_dispatch:
   pull_request:
-    [open, closed, synchronize]
+    types: [open, closed, synchronize]
   push:
     branches:
       - master
