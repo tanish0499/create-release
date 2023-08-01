@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  workflow-job
+  workflow-job:
     runs-on: latest
     steps:
       - name: list files
