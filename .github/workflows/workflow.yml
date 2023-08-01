@@ -1,0 +1,14 @@
+name: Workflow File
+
+on:
+  workflow_dispatch:
+  push:
+    branch:
+      - master
+
+jobs:
+  name:  job
+  runs-on: latest
+  steps:
+    - name: list files
+      run: ls -lart
